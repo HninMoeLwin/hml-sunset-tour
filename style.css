@@ -1,0 +1,122 @@
+/* ========== Global Reset ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+/* ========== Body ========== */
+/* body {
+  font-size: 16px;
+  padding: 10px;
+} */
+
+/* ========== Hero Section ========== */
+.hero1 {
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+    url(./imagess/pic-2.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* ========== Navigation ========== */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  margin: auto;
+  border-bottom: 2px solid #fff;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: start;
+  gap: 10px;
+  width: 150px;
+  margin: 20px;
+}
+
+nav img {
+  border-radius: 20%;
+}
+
+/* Nav Menu */
+nav ul {
+  display: flex;
+  align-items: center;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
+  font-size: 17px;
+  color: #fff;
+  text-align: end;
+}
+
+nav ul li a:hover {
+  color: #f50;
+  border-bottom: 2px solid #f50;
+}
+
+/* Search Button */
+nav button {
+  padding: 11px 35px;
+  border: none;
+  background: #f50;
+  font-size: 15px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+nav button:hover {
+  scale: 0.9;
+}
+
+/* ========== Hero Content ========== */
+.content {
+  position: absolute;
+  top: 50%;
+  right: 50px;
+}
+
+.content h1 {
+  color: #fff;
+}
+
+.content h2 {
+  font-size: 50px;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.content h2 span {
+  color: #f50;
+  text-shadow: 1px 1px grey;
+}
+
+.content p {
+  color: #fff;
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+  }
+
+  .navbar-toggle {
+    display: block;
+  }
+}

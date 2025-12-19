@@ -1,0 +1,29 @@
+
+
+/* ========== Intro Section ========== */
+#intro h1 {
+  color: #ea7c3e;
+}
+
+#intro p {
+  color: whitesmoke;
+}
+
+/* ========== Mission / Vision / Goals ========== */
+.card-title {
+  color: chocolate;
+}
+
+.card-text {
+  color: aliceblue;
+}
+
+/* ========== Container Text (Generic) ========== */
+.container h1 {
+  color: #ea7c3e;
+}
+
+.container p {
+  color: aliceblue;
+}
+

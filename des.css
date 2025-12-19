@@ -1,0 +1,197 @@
+/* ========== Global ========== */
+* {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+/* ========== Body ========== */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #0f172a;
+  padding: 40px 20px;
+}
+
+/* ========== Main Title ========== */
+.main-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 50px;
+  letter-spacing: -2px;
+
+  background: linear-gradient(
+    135deg,
+    #22c55e,
+    #06b6d4,
+    #8b5cf6,
+    #f59e0b
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  text-shadow: 0 0 30px rgba(34, 197, 94, 0.5);
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+/* ========== Gallery Section ========== */
+.gallery {
+  min-width: 800px;
+  height: 450px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  background: transparent;
+}
+
+.gallery-panel {
+  flex: 1;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 1;
+  transition: flex 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gallery-panel:hover {
+  flex: 2.5;
+}
+
+.gallery-panel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: filter 0.5s ease;
+}
+
+/* Optional Text Overlay (not used in HTML now) */
+.gallery-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  font-size: 35px;
+  text-align: center;
+  color: #fff;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.gallery-text b {
+  color: chocolate;
+}
+
+/* ========== Cards Container ========== */
+.container {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* ========== Card ========== */
+.card {
+  position: relative;
+  width: 280px;
+  height: 420px;
+  background: #0b1120;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-20px);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.8);
+}
+
+/* Gradient Overlay */
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, #22c55e, #06b6d4, #8b5cf6);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 2;
+}
+
+.card:hover::before {
+  opacity: 0.2;
+}
+
+/* ========== Card Image ========== */
+.card-image {
+  height: 200px;
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.card:hover .card-image img {
+  transform: scale(1.1);
+}
+
+/* ========== Card Content ========== */
+.card-content {
+  position: relative;
+  z-index: 3;
+  padding: 25px;
+  height: calc(100% - 200px);
+  display: flex;
+  flex-direction: column;
+  color: #e5e7eb;
+}
+
+.card-content h3 {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+}
+
+.card-content p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #cbd5f5;
+  flex-grow: 1;
+  margin-bottom: 20px;
+}
+
+.card-content a {
+  align-self: flex-start;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  border-radius: 25px;
+  text-decoration: none;
+  background: #f9fafb;
+  color: #0f172a;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.card-content a:hover {
+  background: #22c55e;
+  color: #0b1120;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(34, 197, 94, 0.4);
+}
+
+/* ========== Animation ========== */
+@keyframes glow {
+  from {
+    filter: drop-shadow(0 0 20px #22c55e);
+  }
+  to {
+    filter: drop-shadow(0 0 30px #8b5cf6);
+  }
+}

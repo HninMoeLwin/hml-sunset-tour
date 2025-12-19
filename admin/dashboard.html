@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sunset Tour Admin Dashboard</title>
+    <!-- bootstrap cdn css -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <!-- bootstrap cdn icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+
+    <style>
+      body {
+        background-color: chocolate;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <div class="d-flex">
+      <div
+        class="d-flex flex-column flex-shrink-0 p-3 bg-body-tertiary"
+        style="width: 280px"
+      >
+        <a
+          href="/"
+          class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
+        >
+          <i class="bi bi-sunset fs-3 text-warning"></i>
+          <span class="fs-4 fw-bold ms-2">Sunset Tour</span>
+        </a>
+        <hr />
+        <ul class="nav nav-pills flex-column mb-auto">
+          <li class="nav-item">
+            <a href="#" class="nav-link active" aria-current="page">
+              <i class="bi bi-house-door me-2"></i>- Dashboard
+            </a>
+          </li>
+          <li>
+            <a href="#bookings" class="nav-link link-body-emphasis">
+              <i class="bi bi-calendar-check me-2"></i> Bookings
+            </a>
+          </li>
+          <li>
+            <a href="#customers" class="nav-link link-body-emphasis">
+              <i class="bi bi-people me-2"></i> Customers
+            </a>
+          </li>
+          <li>
+            <a href="#tours" class="nav-link link-body-emphasis">
+              <i class="bi bi-airplane me-2"></i> Tours
+            </a>
+          </li>
+          <li>
+            <a href="#reports" class="nav-link link-body-emphasis">
+              <i class="bi bi-graph-up me-2"></i> Reports
+            </a>
+          </li>
+        </ul>
+        <hr />
+        <div class="dropdown">
+          <a
+            href="#"
+            class="d-flex align-items-center link-body-emphasis text-decoration-none dropdown-toggle"
+            data-bs-toggle="dropdown"
+          >
+            <i class="bi bi-person-circle me-2"></i>
+            <strong>Admin</strong>
+          </a>
+          <ul class="dropdown-menu text-small shadow">
+            <li><a class="dropdown-item" href="#">Settings</a></li>
+            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li><hr class="dropdown-divider" /></li>
+            <li><a class="dropdown-item" href="#">Sign out</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Main content -->
+      <div class="flex-grow-1 p-4">
+        <!-- Header -->
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <h1 class="h3 mb-0">Dashboard</h1>
+          <div class="btn-group">
+            <button
+              class="btn btn-outline-secondary dropdown-toggle"
+              type="button"
+              data-bs-toggle="dropdown"
+            >
+              <i class="bi bi-three-dots-vertical"></i>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="#">Export</a></li>
+              <li><a class="dropdown-item" href="#">Print</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Stats Cards -->
+        <div class="row mb-4">
+          <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-warning shadow h-100 py-2">
+              <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                  <div class="col mr-2">
+                    <div
+                      class="text-xs font-weight-bold text-warning text-uppercase mb-1"
+                    >
+                      Today's Bookings
+                    </div>
+                    <div class="h5 mb-0 font-weight-bold text-gray-800">12</div>
+                  </div>
+                  <div class="col-auto">
+                    <i class="bi bi-calendar-check fs-1 text-gray-300"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-primary shadow h-100 py-2">
+              <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                  <div class="col mr-2">
+                    <div
+                      class="text-xs font-weight-bold text-primary text-uppercase mb-1"
+                    >
+                      Total Revenue
+                    </div>
+                    <div class="h5 mb-0 font-weight-bold text-gray-800">
+                      $2,4500
+                    </div>
+                  </div>
+                  <div class="col-auto">
+                    <i class="bi bi-currency-dollar fs-1 text-gray-300"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-success shadow h-100 py-2">
+              <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                  <div class="col mr-2">
+                    <div
+                      class="text-xs font-weight-bold text-success text-uppercase mb-1"
+                    >
+                      Total Customers
+                    </div>
+                    <div class="h5 mb-0 font-weight-bold text-gray-800">
+                      156
+                    </div>
+                  </div>
+                  <div class="col-auto">
+                    <i class="bi bi-people fs-1 text-gray-300"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-info shadow h-100 py-2">
+              <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                  <div class="col mr-2">
+                    <div
+                      class="text-xs font-weight-bold text-info text-uppercase mb-1"
+                    >
+                      Sunset Tours
+                    </div>
+                    <div class="h5 mb-0 font-weight-bold text-gray-800">45</div>
+                  </div>
+                  <div class="col-auto">
+                    <i class="bi bi-hourglass fs-1 text-gray-300"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recent Bookings -->
+        <div class="row">
+          <div class="col-xl-8 col-lg-7">
+            <div class="card shadow mb-4">
+              <div
+                class="card-header py-3 d-flex flex-row align-items-center justify-content-between"
+              >
+                <h6 class="m-0 font-weight-bold text-primary">
+                  Recent Bookings
+                </h6>
+                <div class="dropdown no-arrow">
+                  <a
+                    class="dropdown-toggle"
+                    href="#"
+                    role="button"
+                    id="dropdownMenuLink"
+                    data-bs-toggle="dropdown"
+                    ><i class="bi bi-three-dots-vertical fa-sm fa-fw"></i>
+                  </a>
+                  <ul
+                    class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
+                  >
+                    <li><a class="dropdown-item" href="#">View All</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table
+                    class="table table-bordered"
+                    width="100%"
+                    cellspacing="0"
+                  >
+                    <thead>
+                      <tr>
+                        <th>Customer</th>
+                        <th>Tour Date</th>
+                        <th>Tour Type</th>
+                        <th>Status</th>
+                        <th>Amount</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>John Smith & family</td>
+                        <td>Dec 20, 2025</td>
+                        <td>Thailand - Bangok</td>
+                        <td><span class="badge bg-success">Confirmed</span></td>
+                        <td>$3,650</td>
+                      </tr>
+                      <tr>
+                        <td>Sarah Johnson</td>
+                        <td>Dec 21, 2025</td>
+                        <td>Italy</td>
+                        <td>
+                          <span class="badge bg-warning text-dark"
+                            >Pending</span
+                          >
+                        </td>
+                        <td>$1,200</td>
+                      </tr>
+                      <tr>
+                        <td>Michael Brown</td>
+                        <td>Dec 22, 2025</td>
+                        <td>Portugal</td>
+                        <td><span class="badge bg-success">Confirmed</span></td>
+                        <td>$1,050</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Actions -->
+          <div class="col-xl-4 col-lg-5">
+            <div class="card shadow mb-4">
+              <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">Quick Actions</h6>
+              </div>
+              <div class="card-body">
+                <a
+                  href="#"
+                  class="btn btn-primary btn-block mb-3 w-100 d-flex align-items-center"
+                >
+                  <i class="bi bi-plus-circle me-2"></i> New Booking
+                </a>
+                <a
+                  href="#"
+                  class="btn btn-outline-success btn-block mb-3 w-100 d-flex align-items-center"
+                >
+                  <i class="bi bi-person-plus me-2"></i> Add Customer
+                </a>
+                <a
+                  href="#"
+                  class="btn btn-outline-info btn-block mb-3 w-100 d-flex align-items-center"
+                >
+                  <i class="bi bi-ship me-2"></i> New Tour
+                </a>
+                <a
+                  href="#"
+                  class="btn btn-outline-warning btn-block w-100 d-flex align-items-center"
+                  ><i class="bi bi-download me-2"></i> Export Data
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
